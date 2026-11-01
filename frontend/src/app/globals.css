@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f6fa;
+  color: #202433;
+  font-family: Inter, Arial, sans-serif;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 16px 20px;
+}
+
+.panel {
+  width: 100%;
+  max-width: 460px;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #e9eaf0;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgb(25 35 60 / 5%);
+}
+
+.header {
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #6476d9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.header h1 {
+  margin: 10px 0;
+  font-size: 32px;
+  letter-spacing: -1.2px;
+}
+
+.header p {
+  margin: 0;
+  color: #858b9a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.uploadArea {
+  display: flex;
+  width: 100%;
+  min-height: 230px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 14px;
+  border: 1.5px dashed #d7dbea;
+  border-radius: 14px;
+  background: #fafbfe;
+}
+
+.uploadArea:hover {
+  border-color: #6476d9;
+  background: #f7f8ff;
+}
+
+.uploadArea.hasImage {
+  min-height: 230px;
+  border-style: solid;
+  background: #f8f9fc;
+}
+
+.uploadText {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.uploadIcon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+  background: #edf0ff;
+  color: #6476d9;
+  font-size: 26px;
+}
+
+.uploadText strong {
+  font-size: 13px;
+}
+
+.uploadText > span:last-child {
+  color: #969baa;
+  font-size: 11px;
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.fileRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  color: #747b8c;
+  font-size: 12px;
+}
+
+.fileRow span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileRow button {
+  flex-shrink: 0;
+  border: 0;
+  background: none;
+  color: #6476d9;
+}
+
+.predictButton {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: 0;
+  border-radius: 11px;
+  background: #596de0;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.predictButton:hover:not(:disabled) {
+  background: #4659c7;
+}
+
+.error {
+  margin: 14px 0 0;
+  color: #d44343;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.result {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #eceef3;
+}
+
+.result h2 {
+  margin: 10px 0 24px;
+  font-size: 24px;
+}
+
+.probability + .probability {
+  margin-top: 20px;
+}
+
+.probabilityLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+  font-size: 13px;
+}
+
+.probabilityLabel strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #eef0f5;
+}
+
+.bar {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 250ms ease;
+}
+
+.catBar {
+  background: #e8a65a;
+}
+
+.dogBar {
+  background: #6578e5;
+}
+
+footer {
+  margin-top: 22px;
+  color: #a0a5b2;
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 24px 20px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+}
